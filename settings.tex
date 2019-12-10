@@ -1,0 +1,92 @@
+\usetheme[numbering=none, progressbar=none, sectionpage=none , block=fill]{metropolis} %numbering=fraction,
+
+\setsansfont{Arial}      % set main font
+%\setsansfont{Myriad Pro}
+\usepackage[style=ieee,sorting=nyt]{biblatex}
+\addbibresource{biblio.bib}
+\usepackage{color}
+\setmonofont{Consolas}
+\usepackage{arevmath}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{media9}
+\usepackage{pgfplots}
+\graphicspath{{./figures/}}
+\addmediapath{{./movies/}}
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false} 
+\newlength\figurewidth
+\newlength\figureheight
+
+\definecolor{TueRed}{HTML}{cf0545}
+%\definecolor{TueText}{HTML}{003A80}
+\definecolor{TueBlue}{HTML}{00a6d6}
+\definecolor{TueWarm}{HTML}{f54029}
+\definecolor{TueText}{RGB}{0,58,128}
+
+\definecolor{PMS206}{HTML}{d6004a}
+\definecolor{PMSWarmRed}{HTML}{f73131}
+\definecolor{PMS226}{HTML}{d6007b}
+\definecolor{PMS253}{HTML}{ad20ad}
+\definecolor{PMS2748}{HTML}{101073}
+\definecolor{PMS300}{HTML}{0066cc} 
+\definecolor{PMSProcessCyan}{HTML}{00a2de}
+\definecolor{PMS137}{HTML}{ff9a00}
+
+\setbeamercolor{frametitle}{fg=white, bg=TueRed}
+\setbeamercolor{progress bar}{fg=TueRed}
+\setbeamercolor{normal text}{fg=TueText, bg=white}
+\setbeamercolor{title}{fg=TueText, bg=white}
+\setbeamercolor{background canvas}{fg=black, bg=white}
+\setbeamercolor{math text}{fg=TueText, bg=white}
+\setbeamercolor{math text displayed}{fg=TueText, bg=white}
+
+\definecolor{Block}{HTML}{ededed}
+\setbeamercolor{block title}{bg=TueRed,fg=white}
+\setbeamercolor{block body}{bg=Block,fg=TueText}
+%\setbeamercolor{block title}{bg=TueText,fg=white}
+%\setbeamercolor{block body}{bg=TueBlue,fg=white}
+%\setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{institute}{size=\footnotesize}
+
+\setbeamertemplate{bibliography item}[text]
+\usepackage{mhchem}
+\usepackage[per-mode=symbol]{siunitx}
+\AtBeginDocument{\sisetup{math-rm=\mathrm, text-rm=\rmfamily}} %\si 
+
+\usepackage{amsmath}
+\usepackage{mathspec}
+\setmathfont(Digits){Arial}
+
+\usepackage{caption}
+
+\DeclareCaptionLabelFormat{mycaption}{\usebeamercolor[fg]{caption name}#1#2 \,\,}
+\captionsetup[figure]{labelformat=mycaption, labelsep=none, labelfont=sf} %sc
+\captionsetup[table]{labelformat=mycaption, labelsep=none, labelfont=sf} %sc
+\setbeamerfont{caption}{series=\normalfont,size=\footnotesize}
+
+\renewcommand{\figurename}{Fig.\,}
+\renewcommand{\tablename}{Tab.\,}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%								COMMANDS								%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\includemovie}[1]{%
+\includemedia[%
+	width=\textwidth , height=0.55\textwidth,
+	activate=pagevisible,%
+	deactivate=pageclose,%
+	addresource=#1,%
+	flashvars={%
+		src=#1 % same path as in addresource!
+		&autoPlay=true %
+		&loop=false % 
+		&scaleMode=letterbox
+		&autoRewind=false
+		&muted=true
+		&controlBarAutoHideTimeout=0 %  time span before auto-hide
+		%&deactivate=onclick %faster
+}%
+]{}{StrobeMediaPlayback.swf}}%
+

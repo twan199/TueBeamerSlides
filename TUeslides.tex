@@ -1,0 +1,260 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  								LuaLatex								 %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,aspectratio=43,mathserif]{beamer}
+\input{settings.tex}
+
+\begin{document}
+\nocite{*} %% All sources
+
+\title{Optimization of the Heating Process for Offshore Wind Turbine Foundations}
+\author{T.M.J. Bouts}
+\institute{\today \\
+Eindhoven University of Technology}
+\titlegraphic{%
+  \makebox[\textwidth]{%
+    \includegraphics[height=0.95cm]{Tue_logo2.pdf}%
+    \hfill%
+    \includegraphics[height=0.95cm]{Microsystems_logo.pdf}%
+    \hspace*{0.5cm}
+  }%
+}
+\input{titlepage.tex}
+\begin{frame}[noframenumbering]
+    \titlepage
+    \thispagestyle{empty}
+\end{frame}
+
+%\begingroup
+%\large
+
+\begin{frame}{Contents}
+\tableofcontents[hideallsubsections]
+\end{frame}
+\section{Introduction}
+
+\begin{frame}{Introduction}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+      \begin{itemize}
+        \item 80m monopole
+        \begin{itemize}
+       		\item[--] Piles welded together
+	    \end{itemize}    
+	    \pause    
+        \item Minimum 100 $^{\circ} \text{C}$
+        \pause
+        \item Propane \& Natural gas
+      \end{itemize}
+
+    \column{0.5\textwidth}
+		\begin{figure}[H]
+			\hfill 
+			\includegraphics[width=.9\linewidth]{figures/Windmill.png}
+			%\caption{}
+			%\label{fig:}
+		\end{figure} 
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+	$1 2 3 4 5 6 7 8 9 0$ math \\
+	1234567890 no math
+\end{frame}
+
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Cost reduction by changing burner configuration
+		\item Burner to pile
+		\begin{itemize}
+			\item[--] Burner types
+			\item[--] Different fuels
+			\item[--] Heat flux as a function of position
+		\end{itemize}				
+		\item Heat transfer in the pile
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Adiabatic flame temperature}
+	\begin{figure}[H]
+		\centering 
+		\includegraphics[width=0.8\linewidth]{ad.png}
+		%\caption{A figure with flames}
+	\end{figure} 
+\end{frame}
+
+\begin{frame}{Tikz Figure}
+\vspace*{-2mm}
+	\begin{figure}
+		\setlength\figurewidth{0.8\textwidth}
+		\setlength\figureheight{0.6\textwidth}
+		\centering		
+		\input{figures/Ad.tex}
+		%\caption{Kas is dken ok}
+		\label{kalsd}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{PDF picture}
+	\begin{figure}[h!]
+		\centering 
+		\includegraphics[width=.8\linewidth]{J100.pdf}
+		%\caption{A new figure}
+		\label{fig:}
+	\end{figure} 
+\end{frame}
+
+\begin{frame}{Tikz Figure}
+%\vspace*{2mm}
+	\begin{figure}
+		\setlength\figurewidth{0.9\textwidth}
+		\setlength\figureheight{0.6\textwidth}
+		\centering		
+		\input{figures/Kaas.tex}
+		%\caption{Kas is dken ok}
+		\label{kalsd}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Laminar flow: single jet burner}
+\begin{figure}[H] 
+		\includegraphics[width=\linewidth]{Laminar2.png} 
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Laminar flow: single jet burner}
+	\begin{figure}[H]
+		\centering 
+		\includegraphics[width=\linewidth]{Laminar.png}
+	\end{figure}
+\end{frame}
+
+
+
+\section{Theory}
+\begin{frame}{Stagnation point}
+\newcommand{\Rey}{\operatorname{\mathit{\mathcal{R}\kern-.14em e}}}
+
+\newcommand{\Web}{\operatorname{\mathit{\mathcal{W}\kern-.14em e}}}
+
+\newcommand{\Pec}{\operatorname{\mathit{\mathcal{P}\kern-.14em e}}}
+
+\newcommand{\Capi}{\operatorname{\mathit{\mathcal{C}\kern-.14em a}}}
+sdfsdfsdcxvxcv
+$
+	\Capi
+	\Web
+	\Rey
+	\Pec
+	$
+	\[
+		q(r) = q_s \exp \left(-0.45\frac{r}{R_2} - 1 \right)
+	\]
+	\[		h = 0.763 \sqrt{\beta^{1.5} \rho_u \mu} \Rey^{0.6} c_p \Capi_i x \Web^{5.2} \delta_{ij}
+	\]
+ \end{frame}
+\section{Movies}
+\begin{frame}{Movie time}
+\begin{center}%
+    \includemovie{Marangoni.mp4}%
+\newline
+The Marangoni Effect
+\\
+{\scriptsize \url{https://www.youtube.com/watch?v=0h16Tyn2138}}
+\end{center}%
+\end{frame}
+
+\begin{frame}[standout]{TO DO}
+	\begin{itemize}
+		\item structuur \\
+		\item Matlab script\\
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusions/Summary}
+	\begin{itemize}
+		\item Cost reduction by changing burner configuration
+		\item Burner to pile
+	\end{itemize}
+\end{frame}
+
+{\setbeamercolor{background canvas}{bg=TueRed}
+\begin{frame}{}  
+	\begin{center}
+	\color{white}{\Large{\textbf{Questions?}}}
+	\end{center}
+\end{frame}
+}
+
+\begin{frame}
+	\vspace*{3em}
+	\begin{columns}[onlytextwidth,c]
+		\column{0.1\textwidth}
+    	\column{0.35\textwidth}
+    	\textbf{Twan Bouts}
+    	
+    	\column{0.55\textwidth}
+    	{\scriptsize
+    	Eindhoven University of Technology\\
+    	Department of Mechanical Engineering\\
+    	Microsystems\\
+		\vspace*{1em}
+    	\href{mailto:t.m.j.bouts@student.tue.nl}{t.m.j.bouts@student.tue.nl}\\
+    	%\href{https://www.tue.nl/en/research/research-groups/microsystems/}{https://www.tue.nl/en/research/research-groups/microsystems/}
+    	}
+    \end{columns}
+    \vspace*{1em}
+    %{\scriptsize\href{https://www.tue.nl/en/research/research-groups/microsystems/}{https://www.tue.nl/en/research/research-groups/microsystems/}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%						END OF REGULAR PRESENTATION						%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\begin{frame}[fragile]{Backup slides}
+  Sometimes, it is useful to add slides at the end of your presentation to
+  refer to during audience questions.
+
+  The best way to do this is to include the \verb|appendixnumberbeamer|
+  package in your preamble and call \verb|\appendix| before your backup slides.
+
+  will automatically turn off slide numbering and progress bars for
+  slides in the appendix.
+\end{frame}
+
+\begin{frame}{Blockies}
+  Just some random text to prove that these blocks can be incorporated within a slide
+   \begin{block}{Formulae}
+	$ F = m \cdot a = m \dfrac{\partial^2 x}{\partial t^2 }$
+   \end{block}
+  If you are keen on writing some more, you could do it here.
+   \begin{definition}
+   		Newton says, force is mass times acceleration
+   \end{definition}
+    It's even possible to write under the blocks
+\end{frame}
+
+\begin{frame}{Tables}
+
+\begin{center}
+\begin{table}
+\centering\caption{Properties of different fuels for current situation (Factory specs) and at the highest $T_{flame}$ (Optimal)}
+\footnotesize{
+\begin{tabular}{ l  l  l  l  l l} 
+Fuel & Setting & $s_L [\frac{cm}{s}]$ & $T_{flame} [K]$ & $\rho _u [\frac{kg}{m^3}]$ & $\rho _b [\frac{kg}{m^3}]$ \vspace{1mm} \\ \hline 
+\ce{CH4 - O2} & Optimal  & 306 & 3055.43 & 1.0961 & 0.0830 \\
+& Factory & 306 & 3051.62 & 1.1091 & 0.0859 \vspace{1mm} \\ 
+ \ce{C3H8 - O2} & Optimal  & 353 & 3100.85 & 1.4238 & 0.0858 \\
+& Factory & 353 & 3064.47 & 1.4427 & 0.0796 \\  
+\end{tabular}}
+\end{table}
+\end{center}
+\end{frame}
+
+\begin{frame}[noframenumbering,plain,allowframebreaks]{References}
+\renewcommand*{\bibfont}{\scriptsize}
+    \printbibliography[heading=none]
+\end{frame}
+
+%\endgroup 	
+\end{document}

@@ -1,0 +1,28 @@
+\makeatletter
+\setbeamertemplate{title page}{
+  \vspace*{-30mm}\begin{minipage}[b][\paperheight]{\textwidth}
+    \centering
+    \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+    \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+    \usebeamertemplate*{title separator}
+    \ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+    %\vspace*{5mm}
+    \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+	%\vspace*{-5mm}
+    \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+  \end{minipage}
+}
+
+\setbeamertemplate{title}{
+  \linespread{1.0}%
+  {\Large\inserttitle}%
+  \par%
+  \vspace*{0.5em}
+}
+\setbeamertemplate{subtitle}{
+  \insertsubtitle%
+  \par%
+  \vspace*{0.5em}
+}
+
+\makeatother
